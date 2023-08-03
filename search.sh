@@ -81,28 +81,35 @@ LOOKUP_SEARCH=""
 
 ./evict-cache.sh
 # DENSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:06:10:00\"
-DENSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:22:00:00\"
+DENSE_SEARCH="search index=git4 earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\"
 | spath \"actor.display_login\" 
 | stats count by actor.display_login "
 
-SPARSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" TERM(abcdef) "
+SPARSE_SEARCH="search index=git4 earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" TERM(abcdef) "
 #SPARSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:06:10:00\" TERM(abcdef) "
 
+IO_READ_LIMIT_BYTES=$(systemctl show --property IOReadBandwidthMax Splunkd.service | awk -F ' ' '{print $2}')
+IO_READ_LIMIT_MB=$(expr $IO_READ_LIMIT_BYTES / 1000 / 1000)
+echo "IO_READ_LIMIT_MB: ${IO_READ_LIMIT_MB}"
 
-TEST_NAME="700M"
-LOOKUP_FILE="search_tests_${TEST_NAME}.csv"
+TEST_NAME="${IO_READ_LIMIT_MB}M"
+LOOKUP_FILE="search_tests_git4_${TEST_NAME}.csv"
+
+echo $LOOKUP_FILE
+
+#exit 1
 
 clear_lookup_file
 
 splunk_search_polling "$DENSE_SEARCH"
 echo $SID
-build_lookup_search $SID none dense false $LOOKUP_FILE
+build_lookup_search $SID $TEST_NAME dense false $LOOKUP_FILE
 echo $LOOKUP_SEARCH
 splunk_search_polling "$LOOKUP_SEARCH"
 
 splunk_search_polling "$DENSE_SEARCH"
 echo $SID
-build_lookup_search $SID none dense true $LOOKUP_FILE
+build_lookup_search $SID $TEST_NAME dense true $LOOKUP_FILE
 echo $LOOKUP_SEARCH
 splunk_search_polling "$LOOKUP_SEARCH"
 
@@ -110,12 +117,12 @@ splunk_search_polling "$LOOKUP_SEARCH"
 
 splunk_search_polling "$SPARSE_SEARCH"
 echo $SID
-build_lookup_search $SID none sparse false $LOOKUP_FILE
+build_lookup_search $SID $TEST_NAME sparse false $LOOKUP_FILE
 echo $LOOKUP_SEARCH
 splunk_search_polling "$LOOKUP_SEARCH"
 
 splunk_search_polling "$SPARSE_SEARCH"
 echo $SID
-build_lookup_search $SID none sparse true $LOOKUP_FILE
+build_lookup_search $SID $TEST_NAME sparse true $LOOKUP_FILE
 echo $LOOKUP_SEARCH
 splunk_search_polling "$LOOKUP_SEARCH"
