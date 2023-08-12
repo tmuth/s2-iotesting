@@ -1,5 +1,6 @@
 #!/bin/bash
 
+INDEX_NAME=${INDEX_NAME}
 SPLUNK_HOST=localhost:8089
 AUTH_TOKEN=eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhZG1pbiBmcm9tIGlwLTE3Mi0zMS0xNS0xNzguZWMyLmludGVybmFsIiwic3ViIjoiYWRtaW4iLCJhdWQiOiJiYXNoIiwiaWRwIjoiU3BsdW5rIiwianRpIjoiNjg5N2JlZWJjNjkzZDU0MGYzZTgxY2NiMjVmMjY5OWQ1NDdlMzEzOGU0NTU3NzA1Yjg2YTdlN2Q4ZGI4MjBkYSIsImlhdCI6MTY5MDkzMjcxNCwiZXhwIjoxNzIyNTU1MTE0LCJuYnIiOjE2OTA5MzI3MTR9.au2gO-9Bi6nL_c43IradkeTw1raWdcm1rekm0MC4mTr-jTv6hGR566iCwmu2QO32x2bA9GfpFyI9UzaPo7YxCg
 # Token authentication is the preferred method over username/password and is documented here:
@@ -76,30 +77,47 @@ function clear_lookup_file {
     splunk_search_polling " search | stats count | where 1==2 | outputlookup ${LOOKUP_FILE} "
 }
 
+function evict_cache {
+    splunk _internal call /services/admin/cacheman/_evict -post:mb 1000000000 -post:path /mnt/nvme/splunk/${INDEX_NAME} -method POST -auth 'admin:welcome1'
+}
+
 SID=""
 LOOKUP_SEARCH=""
 
 ./evict-cache.sh
 # DENSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:06:10:00\"
-DENSE_SEARCH="search index=git4 earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\"
-| spath \"actor.display_login\" 
-| stats count by actor.display_login "
+DENSE_SEARCH="search index=${INDEX_NAME} earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\"
+| spath \"display_login\" 
+| stats count by display_login "
 
-SPARSE_SEARCH="search index=git4 earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" TERM(abcdef) "
+SPARSE_SEARCH="search index=${INDEX_NAME} earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" TERM(abcdef) "
 #SPARSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:06:10:00\" TERM(abcdef) "
+
+TSTATS_SEARCH="| tstats summariesonly=t chunk_size=1000000000 count WHERE index=${INDEX_NAME} AND display_login=\"Ze*\" earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" groupby display_login"
 
 IO_READ_LIMIT_BYTES=$(systemctl show --property IOReadBandwidthMax Splunkd.service | awk -F ' ' '{print $2}')
 IO_READ_LIMIT_MB=$(expr $IO_READ_LIMIT_BYTES / 1000 / 1000)
 echo "IO_READ_LIMIT_MB: ${IO_READ_LIMIT_MB}"
 
 TEST_NAME="${IO_READ_LIMIT_MB}M"
-LOOKUP_FILE="search_tests_git4_${TEST_NAME}.csv"
+LOOKUP_FILE="search_tests_high_card_compressed1_${TEST_NAME}.csv"
 
 echo $LOOKUP_FILE
 
 #exit 1
 
 clear_lookup_file
+
+function run_test {
+    #1 search string
+    #2 search type
+    #3 cached
+    splunk_search_polling "${1}"
+    echo $SID
+    build_lookup_search $SID $TEST_NAME dense false $LOOKUP_FILE
+    echo $LOOKUP_SEARCH
+    splunk_search_polling "$LOOKUP_SEARCH"
+}
 
 splunk_search_polling "$DENSE_SEARCH"
 echo $SID
@@ -124,5 +142,20 @@ splunk_search_polling "$LOOKUP_SEARCH"
 splunk_search_polling "$SPARSE_SEARCH"
 echo $SID
 build_lookup_search $SID $TEST_NAME sparse true $LOOKUP_FILE
+echo $LOOKUP_SEARCH
+splunk_search_polling "$LOOKUP_SEARCH"
+
+
+./evict-cache.sh
+
+splunk_search_polling "$TSTATS_SEARCH"
+echo $SID
+build_lookup_search $SID $TEST_NAME tstats false $LOOKUP_FILE
+echo $LOOKUP_SEARCH
+splunk_search_polling "$LOOKUP_SEARCH"
+
+splunk_search_polling "$TSTATS_SEARCH"
+echo $SID
+build_lookup_search $SID $TEST_NAME tstats true $LOOKUP_FILE
 echo $LOOKUP_SEARCH
 splunk_search_polling "$LOOKUP_SEARCH"
