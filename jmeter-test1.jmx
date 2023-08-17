@@ -952,7 +952,7 @@
           </elementProp>
           <elementProp name="OUTPUT_LOOKUP_FILE" elementType="Argument">
             <stringProp name="Argument.name">OUTPUT_LOOKUP_FILE</stringProp>
-            <stringProp name="Argument.value">test_a_100M.csv</stringProp>
+            <stringProp name="Argument.value">${__P(OUTPUT_LOOKUP_FILE, test_b_100M.csv)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="IO_LIMIT" elementType="Argument">
