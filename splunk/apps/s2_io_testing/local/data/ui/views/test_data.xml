@@ -1,0 +1,104 @@
+
+<dashboard version="2" theme="light">
+    <label>Test Data</label>
+    <description></description>
+    <definition><![CDATA[
+{
+	"visualizations": {
+		"viz_EpooDQEv": {
+			"type": "splunk.column",
+			"options": {},
+			"dataSources": {
+				"primary": "ds_37Cb1Dv9"
+			}
+		},
+		"viz_BxRzgdtu": {
+			"type": "splunk.column",
+			"options": {},
+			"dataSources": {
+				"primary": "ds_GIhocW20"
+			}
+		}
+	},
+	"dataSources": {
+		"ds_37Cb1Dv9": {
+			"type": "ds.search",
+			"options": {
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files\n| search title=*test_b*\n| map search=\"| inputlookup $$title$$ append=true\"\n| fields - _raw \n| search search_name !=\"dense*\"\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1)\n| eval test_name=search_name+\"_\"+cached\n| table sid,runDuration,test_name,io_limit,search_name,cached,search.index.bucketcache.miss.duration_secs,search.index.bucketcache.hit.invocations,search.index.bucketcache.miss.invocations,searchTotalBucketsCount,searchTotalBucketsCount, eventsScannedPerSec\n| sort search_type,cached,io_limit\n| chart max(runDuration) over test_name by io_limit"
+			},
+			"name": "Search_1"
+		},
+		"ds_GIhocW20": {
+			"type": "ds.search",
+			"options": {
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files \n| search title=*test_b* \n| map search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| search search_name !=\"dense*\"\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1) \n| eval test_name=search_name+\"_\"+cached,published2=strptime(published, \"%Y-%m-%dT%H:%M:%S.%N\") \n| eval finished=strftime((published2+runDuration),\"%Y-%m-%dT%H:%M:%S.%N\") \n| table published,runDuration,finished,search_name,test_name,cached,sname,secondInterval,io_limit \n| stats min(published) as min_time ,max(finished) as max_time,first(io_limit) as io_limit,first(cached) as cached by sname \n| eval min_t = strptime(min_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval max_t = strptime(max_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval diff = tostring((max_t - min_t), \"duration\") \n| eval duration=strptime(diff,\"%H:%M:%S.%2N\") \n| eval base=strptime(\"00:00:00.00\",\"%H:%M:%S.%2N\") \n| eval secs=duration-base  \n| chart max(secs) as seconds by io_limit,cached"
+			},
+			"name": "Search_2"
+		}
+	},
+	"defaults": {
+		"dataSources": {
+			"ds.search": {
+				"options": {
+					"queryParameters": {
+						"latest": "$global_time.latest$",
+						"earliest": "$global_time.earliest$"
+					}
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input_global_trp": {
+			"type": "input.timerange",
+			"options": {
+				"token": "global_time",
+				"defaultValue": "0,"
+			},
+			"title": "Global Time Range"
+		}
+	},
+	"layout": {
+		"type": "grid",
+		"options": {
+			"width": 1440,
+			"height": 960
+		},
+		"structure": [
+			{
+				"item": "viz_EpooDQEv",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"w": 1440,
+					"h": 400
+				}
+			},
+			{
+				"item": "viz_BxRzgdtu",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 400,
+					"w": 1440,
+					"h": 400
+				}
+			}
+		],
+		"globalInputs": [
+			"input_global_trp"
+		]
+	},
+	"description": "",
+	"title": "Test Data"
+}
+    ]]></definition>
+    <meta type="hiddenElements"><![CDATA[
+{
+	"hideEdit": false,
+	"hideOpenInSearch": false,
+	"hideExport": false
+}
+    ]]></meta>
+</dashboard>

@@ -1,0 +1,19 @@
+[app/ui]
+version = 9.1.0.1
+modtime = 1691926523.095865000
+
+[app/launcher]
+version = 9.1.0.1
+modtime = 1691926523.096728000
+
+[views/sample_dashboard]
+access = read : [ * ], write : [ * ]
+export = none
+owner = nobody
+version = 9.1.0.1
+modtime = 1691926588.495850000
+
+[views/test_data]
+owner = admin
+version = 9.1.0.1
+modtime = 1692328344.930756000
