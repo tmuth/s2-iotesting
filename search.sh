@@ -2,7 +2,8 @@
 
 INDEX_NAME=test_high_cardinality_compressed1
 EARLIEST="01/10/2023:06:00:00"
-LATEST="01/19/2023:22:00:00"
+LATEST="01/12/2023:22:00:00"
+NAME_SUFFIX="2"
 # LATEST="01/18/2023:22:00:00"
 SPLUNK_HOST=localhost:8089
 AUTH_TOKEN=eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJhZG1pbiBmcm9tIGlwLTE3Mi0zMS0xNS0xNzguZWMyLmludGVybmFsIiwic3ViIjoiYWRtaW4iLCJhdWQiOiJiYXNoIiwiaWRwIjoiU3BsdW5rIiwianRpIjoiNjg5N2JlZWJjNjkzZDU0MGYzZTgxY2NiMjVmMjY5OWQ1NDdlMzEzOGU0NTU3NzA1Yjg2YTdlN2Q4ZGI4MjBkYSIsImlhdCI6MTY5MDkzMjcxNCwiZXhwIjoxNzIyNTU1MTE0LCJuYnIiOjE2OTA5MzI3MTR9.au2gO-9Bi6nL_c43IradkeTw1raWdcm1rekm0MC4mTr-jTv6hGR566iCwmu2QO32x2bA9GfpFyI9UzaPo7YxCg
@@ -112,17 +113,18 @@ SPARSE_SEARCH_INDEXED="search index=${INDEX_NAME} display_login="Z*"  earliest=\
 | stats count by display_login "
 
 
-RARE_SEARCH="search index=${INDEX_NAME} earliest=\"01/10/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" \"zefuirusu\" "
+RARE_SEARCH="search index=${INDEX_NAME} earliest=\"${EARLIEST}\" latest=\"${LATEST}\" \"zefuirusu\" | stats count"
 #SPARSE_SEARCH="search index=git earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:06:10:00\" TERM(abcdef) "
 
-TSTATS_SEARCH="| tstats summariesonly=t chunk_size=1000000000 count WHERE index=${INDEX_NAME} AND display_login=\"Ze*\" earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" groupby display_login"
+TSTATS_SEARCH="| tstats summariesonly=t chunk_size=1000000000 count WHERE index=${INDEX_NAME} AND display_login=\"Ze*\" earliest=\"01/18/2023:06:00:00\" latest=\"01/18/2023:22:00:00\" 
+BY _time span=2880s, display_login | timechart limit=100 span=2880s count BY display_login usenull=false "
 
 IO_READ_LIMIT_BYTES=$(systemctl show --property IOReadBandwidthMax Splunkd.service | awk -F ' ' '{print $2}')
 IO_READ_LIMIT_MB=$(expr $IO_READ_LIMIT_BYTES / 1000 / 1000)
 echo "IO_READ_LIMIT_MB: ${IO_READ_LIMIT_MB}"
 
 TEST_NAME="${IO_READ_LIMIT_MB}M"
-LOOKUP_FILE="${INDEX_NAME}_${TEST_NAME}.csv"
+LOOKUP_FILE="${INDEX_NAME}_${TEST_NAME}_${NAME_SUFFIX}.csv"
 
 echo $LOOKUP_FILE
 
@@ -143,17 +145,17 @@ function run_test {
     splunk_search_polling "$LOOKUP_SEARCH"
 }
 
-evict_cache
-run_test "${DENSE_SEARCH_RAW}" "dense-raw" "false"
-run_test "${DENSE_SEARCH_RAW}" "dense-raw" "true"
+# evict_cache
+# run_test "${DENSE_SEARCH_RAW}" "dense-raw" "false"
+# run_test "${DENSE_SEARCH_RAW}" "dense-raw" "true"
 
-evict_cache
-run_test "${DENSE_SEARCH_INDEXED}" "dense-indexed" "false"
-run_test "${DENSE_SEARCH_INDEXED}" "dense-indexed" "true"
+# evict_cache
+# run_test "${DENSE_SEARCH_INDEXED}" "dense-indexed" "false"
+# run_test "${DENSE_SEARCH_INDEXED}" "dense-indexed" "true"
 
-evict_cache
-run_test "${SPARSE_SEARCH_RAW}" "sparse-raw" "false"
-run_test "${SPARSE_SEARCH_RAW}" "sparse-raw" "true"
+# evict_cache
+# run_test "${SPARSE_SEARCH_RAW}" "sparse-raw" "false"
+# run_test "${SPARSE_SEARCH_RAW}" "sparse-raw" "true"
 
 evict_cache
 run_test "${SPARSE_SEARCH_INDEXED}" "sparse-indexed" "false"

@@ -1,0 +1,34 @@
+Mon Aug 14 13:04:23 UTC 2023
+IO_READ_LIMIT_MB: 700
+test_high_cardinality_compressed1_700M.csv
+clear_lookup_file
+splunk_search_polling for search= search | stats count | where 1==2 | outputlookup test_high_cardinality_compressed1_700M.csv 
+
+SID: 1692018263.1129
+evict cache for test_high_cardinality_compressed1 
+QUERYING: 'https://127.0.0.1:8089/services/admin/cacheman/_evict'
+HTTP Status: 200.
+Content:
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+<?xml-stylesheet type="text/xml" href="/static/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <title>cacheman</title>
+  <id>https://127.0.0.1:8089/services/admin/cacheman</id>
+  <updated>2023-08-14T09:05:18-04:00</updated>
+  <generator build="77f73c9edb85" version="9.1.0.1"/>
+  <author>
+    <name>Splunk</name>
+  </author>
+  <link href="/services/admin/cacheman/_new" rel="create"/>
+  <opensearch:totalResults>0</opensearch:totalResults>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <s:messages/>
+</feed>
+
+run_test
+splunk_search_polling for search=search index=test_high_cardinality_compressed1 earliest="01/10/2023:06:00:00" latest="01/19/2023:22:00:00" "Z*" 
+| stats count by display_login 
+
+SID: 1692018318.1135
