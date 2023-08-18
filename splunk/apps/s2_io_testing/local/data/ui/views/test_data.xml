@@ -7,17 +7,22 @@
 	"visualizations": {
 		"viz_EpooDQEv": {
 			"type": "splunk.column",
-			"options": {},
 			"dataSources": {
 				"primary": "ds_37Cb1Dv9"
-			}
+			},
+			"title": "Times by I/O Limit, Search Type and Cached (true) vs Uncached (false)"
 		},
 		"viz_BxRzgdtu": {
 			"type": "splunk.column",
-			"options": {},
+			"options": {
+				"dataValuesDisplay": "all",
+				"yAxisTitleText": "seconds",
+				"yAxisLabelVisibility": "show"
+			},
 			"dataSources": {
 				"primary": "ds_GIhocW20"
-			}
+			},
+			"title": "Uncached vs Cached by I/O Limit"
 		}
 	},
 	"dataSources": {
