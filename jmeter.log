@@ -1,134 +1,135 @@
-2023-08-18 14:37:28,892 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-08-18 14:37:28,913 INFO o.a.j.JMeter: Loading user properties from: /root/download/apache-jmeter-5.6.2/bin/user.properties
-2023-08-18 14:37:28,915 INFO o.a.j.JMeter: Loading system properties from: /root/download/apache-jmeter-5.6.2/bin/system.properties
-2023-08-18 14:37:28,916 INFO o.a.j.JMeter: Setting JMeter property: OUTPUT_LOOKUP_FILE=test_b_100M.csv
-2023-08-18 14:37:28,916 INFO o.a.j.JMeter: Setting JMeter property: IO_LIMIT=100M
-2023-08-18 14:37:28,916 INFO o.a.j.JMeter: Setting JMeter property: CACHED=false
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: Version 5.6.2
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: java.version=1.8.0_382
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: os.name=Linux
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: os.arch=amd64
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: os.version=6.1.38-59.109.amzn2023.x86_64
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: java.awt.headless=true
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-08-18 14:37:28,921 INFO o.a.j.JMeter: Available Processors =24
-2023-08-18 14:37:28,930 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-08-18 14:37:28,930 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-08-18 14:37:28,930 INFO o.a.j.JMeter: JMeterHome=/root/download/apache-jmeter-5.6.2
-2023-08-18 14:37:28,930 INFO o.a.j.JMeter: user.dir  =/home/ec2-user/s2-iotesting
-2023-08-18 14:37:28,930 INFO o.a.j.JMeter: PWD       =/home/ec2-user/s2-iotesting
-2023-08-18 14:37:28,932 INFO o.a.j.JMeter: IP: 172.31.15.178 Name: ip-172-31-15-178.ec2.internal FullName: ip-172-31-15-178.ec2.internal
-2023-08-18 14:37:28,965 INFO o.a.j.s.FileServer: Default base='/home/ec2-user/s2-iotesting'
-2023-08-18 14:37:28,966 INFO o.a.j.s.FileServer: Set new base='/home/ec2-user/s2-iotesting'
-2023-08-18 14:37:29,126 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-08-18 14:37:29,155 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-08-18 14:37:29,163 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-08-18 14:37:29,170 INFO o.a.j.s.SaveService: Loading file: jmeter-test1.jmx
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2023-08-18 14:37:29,248 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2023-08-18 14:37:29,638 INFO o.a.j.JMeter: Creating summariser <summary>
-2023-08-18 14:37:29,657 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2023-08-18 14:37:29,658 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-08-18 14:37:29,658 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2023-08-18 14:37:29,663 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2023-08-18 14:37:29,663 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2023-08-18 14:37:30,215 INFO o.a.j.JMeter: Running test (1692369450215)
-2023-08-18 14:37:30,217 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
-2023-08-18 14:37:30,217 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : setUp Thread Group 
-2023-08-18 14:37:30,217 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group setUp Thread Group.
-2023-08-18 14:37:30,217 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:30,217 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:30,221 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2023-08-18 14:37:30,221 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
-2023-08-18 14:37:30,223 INFO o.a.j.t.JMeterThread: Thread started: setUp Thread Group 1-1
-2023-08-18 14:37:30,263 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = ip-172-31-15-178.ec2.internal
-2023-08-18 14:37:30,274 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2023-08-18 14:37:30,277 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-08-18 14:37:30,278 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2023-08-18 14:37:30,278 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-08-18 14:37:30,278 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-08-18 14:37:30,400 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
-2023-08-18 14:37:30,413 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2023-08-18 14:37:30,413 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2023-08-18 14:37:30,504 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
-2023-08-18 14:37:30,512 INFO o.a.j.u.SSLManager: KeyStore created OK
-2023-08-18 14:37:30,512 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
-2023-08-18 14:37:30,940 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.4/s Avg:   575 Min:   575 Max:   575 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
-2023-08-18 14:37:30,941 INFO o.a.j.t.JMeterThread: Thread is done: setUp Thread Group 1-1
-2023-08-18 14:37:30,941 INFO o.a.j.t.JMeterThread: Thread finished: setUp Thread Group 1-1
-2023-08-18 14:37:30,943 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
-2023-08-18 14:37:31,018 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group 1 -  rare-exact
-2023-08-18 14:37:31,018 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 1 -  rare-exact.
-2023-08-18 14:37:31,018 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,018 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,019 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2023-08-18 14:37:31,019 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Thread Group 2 - rare-wildcard
-2023-08-18 14:37:31,019 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 2 - rare-wildcard.
-2023-08-18 14:37:31,019 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,019 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,019 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1 -  rare-exact 1-1
-2023-08-18 14:37:31,020 INFO o.a.j.t.ThreadGroup: Started thread group number 2
-2023-08-18 14:37:31,020 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : Thread Group 3- tstats1
-2023-08-18 14:37:31,020 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 3- tstats1.
-2023-08-18 14:37:31,020 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,020 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,020 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 2 - rare-wildcard 2-1
-2023-08-18 14:37:31,021 INFO o.a.j.t.ThreadGroup: Started thread group number 3
-2023-08-18 14:37:31,021 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : Thread Group 4- tstats2
-2023-08-18 14:37:31,021 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 4- tstats2.
-2023-08-18 14:37:31,021 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,021 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,021 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 3- tstats1 3-1
-2023-08-18 14:37:31,022 INFO o.a.j.t.ThreadGroup: Started thread group number 4
-2023-08-18 14:37:31,022 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : Thread Group 6- dense-raw
-2023-08-18 14:37:31,022 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 6- dense-raw.
-2023-08-18 14:37:31,022 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,022 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,023 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 4- tstats2 4-1
-2023-08-18 14:37:31,023 INFO o.a.j.t.ThreadGroup: Started thread group number 5
-2023-08-18 14:37:31,023 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : Thread Group 7- dense-indexed
-2023-08-18 14:37:31,023 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 7- dense-indexed.
-2023-08-18 14:37:31,023 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,023 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,023 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 6- dense-raw 5-1
-2023-08-18 14:37:31,024 INFO o.a.j.t.ThreadGroup: Started thread group number 6
-2023-08-18 14:37:31,024 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 7 : Thread Group 8- sparse-raw
-2023-08-18 14:37:31,024 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 8- sparse-raw.
-2023-08-18 14:37:31,024 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,025 INFO o.a.j.t.ThreadGroup: Starting thread group... number=7 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,025 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 7- dense-indexed 6-1
-2023-08-18 14:37:31,025 INFO o.a.j.t.ThreadGroup: Started thread group number 7
-2023-08-18 14:37:31,026 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 8 : Thread Group 9- sparse-indexed
-2023-08-18 14:37:31,026 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 9- sparse-indexed.
-2023-08-18 14:37:31,026 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2023-08-18 14:37:31,026 INFO o.a.j.t.ThreadGroup: Starting thread group... number=8 threads=1 ramp-up=1 delayedStart=false
-2023-08-18 14:37:31,026 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 8- sparse-raw 7-1
-2023-08-18 14:37:31,027 INFO o.a.j.t.ThreadGroup: Started thread group number 8
-2023-08-18 14:37:31,027 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2023-08-18 14:37:31,027 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 9- sparse-indexed 8-1
-2023-08-18 14:37:42,465 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1 -  rare-exact 1-1
-2023-08-18 14:37:42,466 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1 -  rare-exact 1-1
-2023-08-18 14:40:17,369 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 3- tstats1 3-1
-2023-08-18 14:40:17,369 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 3- tstats1 3-1
-2023-08-18 14:40:17,522 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 4- tstats2 4-1
-2023-08-18 14:40:17,522 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 4- tstats2 4-1
-2023-08-18 14:43:15,448 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 2 - rare-wildcard 2-1
-2023-08-18 14:43:15,448 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 2 - rare-wildcard 2-1
-2023-08-18 14:43:15,757 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 9- sparse-indexed 8-1
-2023-08-18 14:43:15,758 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 9- sparse-indexed 8-1
-2023-08-18 14:43:17,647 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 8- sparse-raw 7-1
-2023-08-18 14:43:17,647 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 8- sparse-raw 7-1
-2023-08-18 14:43:23,406 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 7- dense-indexed 6-1
-2023-08-18 14:43:23,407 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 7- dense-indexed 6-1
-2023-08-18 14:44:13,878 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 6- dense-raw 5-1
-2023-08-18 14:44:13,878 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 6- dense-raw 5-1
-2023-08-18 14:44:13,878 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2023-08-18 14:44:13,882 INFO o.a.j.r.Summariser: summary +     24 in 00:06:43 =    0.1/s Avg: 88970 Min:    11 Max: 402688 Err:     0 (0.00%) Active: 0 Started: 8 Finished: 8
-2023-08-18 14:44:13,882 INFO o.a.j.r.Summariser: summary =     25 in 00:06:44 =    0.1/s Avg: 85434 Min:    11 Max: 402688 Err:     0 (0.00%)
+2023-08-24 18:15:34,837 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-08-24 18:15:34,853 INFO o.a.j.JMeter: Loading user properties from: /root/download/apache-jmeter-5.6.2/bin/user.properties
+2023-08-24 18:15:34,854 INFO o.a.j.JMeter: Loading system properties from: /root/download/apache-jmeter-5.6.2/bin/system.properties
+2023-08-24 18:15:34,854 INFO o.a.j.JMeter: Setting JMeter property: INDEX_NAME=git
+2023-08-24 18:15:34,854 INFO o.a.j.JMeter: Setting JMeter property: OUTPUT_LOOKUP_FILE=test_azure_3.csv
+2023-08-24 18:15:34,854 INFO o.a.j.JMeter: Setting JMeter property: IO_LIMIT=3000M
+2023-08-24 18:15:34,854 INFO o.a.j.JMeter: Setting JMeter property: CACHED=false
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: Version 5.6.2
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: java.version=17.0.8
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: os.name=Linux
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: os.arch=amd64
+2023-08-24 18:15:34,859 INFO o.a.j.JMeter: os.version=5.15.0-1042-azure
+2023-08-24 18:15:34,860 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-08-24 18:15:34,860 INFO o.a.j.JMeter: java.awt.headless=true
+2023-08-24 18:15:34,860 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-08-24 18:15:34,860 INFO o.a.j.JMeter: Available Processors =32
+2023-08-24 18:15:34,867 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-08-24 18:15:34,867 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-08-24 18:15:34,867 INFO o.a.j.JMeter: JMeterHome=/root/download/apache-jmeter-5.6.2
+2023-08-24 18:15:34,867 INFO o.a.j.JMeter: user.dir  =/home/azureuser/s2-iotesting
+2023-08-24 18:15:34,867 INFO o.a.j.JMeter: PWD       =/home/azureuser/s2-iotesting
+2023-08-24 18:15:34,874 INFO o.a.j.JMeter: IP: 10.0.0.4 Name: azure-s2-test1 FullName: azure-s2-test1.internal.cloudapp.net
+2023-08-24 18:15:34,884 INFO o.a.j.s.FileServer: Default base='/home/azureuser/s2-iotesting'
+2023-08-24 18:15:34,885 INFO o.a.j.s.FileServer: Set new base='/home/azureuser/s2-iotesting'
+2023-08-24 18:15:35,023 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-08-24 18:15:35,043 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-08-24 18:15:35,045 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-08-24 18:15:35,048 INFO o.a.j.s.SaveService: Loading file: jmeter-test1.jmx
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-08-24 18:15:35,089 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-08-24 18:15:35,145 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-08-24 18:15:35,153 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-08-24 18:15:35,154 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-24 18:15:35,154 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-24 18:15:35,157 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-08-24 18:15:35,158 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-08-24 18:15:35,325 INFO o.a.j.JMeter: Running test (1692900935325)
+2023-08-24 18:15:35,326 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
+2023-08-24 18:15:35,326 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : setUp Thread Group 
+2023-08-24 18:15:35,326 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group setUp Thread Group.
+2023-08-24 18:15:35,327 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:35,327 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:35,329 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-24 18:15:35,329 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
+2023-08-24 18:15:35,330 INFO o.a.j.t.JMeterThread: Thread started: setUp Thread Group 1-1
+2023-08-24 18:15:35,342 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = azure-s2-test1
+2023-08-24 18:15:35,346 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-08-24 18:15:35,347 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-08-24 18:15:35,347 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-08-24 18:15:35,347 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-08-24 18:15:35,347 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-08-24 18:15:35,419 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2023-08-24 18:15:35,423 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2023-08-24 18:15:35,423 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2023-08-24 18:15:35,466 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2023-08-24 18:15:35,468 INFO o.a.j.u.SSLManager: KeyStore created OK
+2023-08-24 18:15:35,468 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2023-08-24 18:15:36,326 INFO o.a.j.t.JMeterThread: Thread is done: setUp Thread Group 1-1
+2023-08-24 18:15:36,327 INFO o.a.j.t.JMeterThread: Thread finished: setUp Thread Group 1-1
+2023-08-24 18:15:36,328 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
+2023-08-24 18:15:36,344 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group 1 -  rare-exact
+2023-08-24 18:15:36,344 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 1 -  rare-exact.
+2023-08-24 18:15:36,344 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,344 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,345 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-24 18:15:36,345 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Thread Group 2 - rare-wildcard
+2023-08-24 18:15:36,345 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 2 - rare-wildcard.
+2023-08-24 18:15:36,345 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,345 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,345 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1 -  rare-exact 1-1
+2023-08-24 18:15:36,346 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : Thread Group 3- tstats1
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 3- tstats1.
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,346 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,346 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 2 - rare-wildcard 2-1
+2023-08-24 18:15:36,346 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : Thread Group 4- tstats2
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 4- tstats2.
+2023-08-24 18:15:36,346 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,347 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,347 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 3- tstats1 3-1
+2023-08-24 18:15:36,347 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2023-08-24 18:15:36,347 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : Thread Group 6- dense-raw
+2023-08-24 18:15:36,347 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 6- dense-raw.
+2023-08-24 18:15:36,347 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,347 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,348 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 4- tstats2 4-1
+2023-08-24 18:15:36,348 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2023-08-24 18:15:36,348 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : Thread Group 7- dense-indexed
+2023-08-24 18:15:36,348 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 7- dense-indexed.
+2023-08-24 18:15:36,348 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,348 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,348 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 6- dense-raw 5-1
+2023-08-24 18:15:36,348 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2023-08-24 18:15:36,348 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 7 : Thread Group 8- sparse-raw
+2023-08-24 18:15:36,349 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 8- sparse-raw.
+2023-08-24 18:15:36,349 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,349 INFO o.a.j.t.ThreadGroup: Starting thread group... number=7 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,349 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 7- dense-indexed 6-1
+2023-08-24 18:15:36,349 INFO o.a.j.t.ThreadGroup: Started thread group number 7
+2023-08-24 18:15:36,349 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 8 : Thread Group 9- sparse-indexed
+2023-08-24 18:15:36,349 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 9- sparse-indexed.
+2023-08-24 18:15:36,349 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-24 18:15:36,349 INFO o.a.j.t.ThreadGroup: Starting thread group... number=8 threads=1 ramp-up=1 delayedStart=false
+2023-08-24 18:15:36,349 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 8- sparse-raw 7-1
+2023-08-24 18:15:36,350 INFO o.a.j.t.ThreadGroup: Started thread group number 8
+2023-08-24 18:15:36,350 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-08-24 18:15:36,350 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 9- sparse-indexed 8-1
+2023-08-24 18:15:37,156 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 2 - rare-wildcard 2-1
+2023-08-24 18:15:37,157 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 2 - rare-wildcard 2-1
+2023-08-24 18:15:37,162 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1 -  rare-exact 1-1
+2023-08-24 18:15:37,162 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1 -  rare-exact 1-1
+2023-08-24 18:15:43,779 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 9- sparse-indexed 8-1
+2023-08-24 18:15:43,779 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 9- sparse-indexed 8-1
+2023-08-24 18:15:43,784 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 3- tstats1 3-1
+2023-08-24 18:15:43,784 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 4- tstats2 4-1
+2023-08-24 18:15:43,784 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 3- tstats1 3-1
+2023-08-24 18:15:43,784 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 4- tstats2 4-1
+2023-08-24 18:15:59,878 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 8- sparse-raw 7-1
+2023-08-24 18:15:59,878 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 8- sparse-raw 7-1
+2023-08-24 18:16:21,423 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 7- dense-indexed 6-1
+2023-08-24 18:16:21,423 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 7- dense-indexed 6-1
+2023-08-24 18:17:04,870 INFO o.a.j.r.Summariser: summary +     23 in 00:01:30 =    0.3/s Avg:  7911 Min:     7 Max: 88520 Err:     0 (0.00%) Active: 1 Started: 8 Finished: 7
+2023-08-24 18:17:04,939 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 6- dense-raw 5-1
+2023-08-24 18:17:04,939 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 6- dense-raw 5-1
+2023-08-24 18:17:04,939 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-08-24 18:17:04,942 INFO o.a.j.r.Summariser: summary +      2 in 00:00:00 =   27.4/s Avg:    33 Min:     6 Max:    60 Err:     0 (0.00%) Active: 0 Started: 8 Finished: 8
+2023-08-24 18:17:04,942 INFO o.a.j.r.Summariser: summary =     25 in 00:01:30 =    0.3/s Avg:  7280 Min:     6 Max: 88520 Err:     0 (0.00%)

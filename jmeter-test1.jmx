@@ -927,7 +927,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="SPLUNK_HOST" elementType="Argument">
             <stringProp name="Argument.name">SPLUNK_HOST</stringProp>
-            <stringProp name="Argument.value">i3en6xl</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="MGT_PORT" elementType="Argument">
@@ -937,7 +937,7 @@
           </elementProp>
           <elementProp name="INDEX_NAME" elementType="Argument">
             <stringProp name="Argument.name">INDEX_NAME</stringProp>
-            <stringProp name="Argument.value">test_high_cardinality_compressed1</stringProp>
+            <stringProp name="Argument.value">${__P(INDEX_NAME, git)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="EARLIEST" elementType="Argument">
