@@ -1,0 +1,76 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1692876998507,23,reset-lookup-file,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl: Temporary failure in name resolution,setUp Thread Group 1-1,text,false,,2499,0,1,1,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,23
+1692876998551,1,tstats1,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 3- tstats1 3-1,text,false,,2202,0,1,4,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998549,1,rare-search-exact,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 1 -  rare-exact 1-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998550,1,rare-search-wildcard,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 2 - rare-wildcard 2-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998552,1,tstats2,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 4- tstats2 4-1,text,false,,2202,0,1,5,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998553,1,dense-raw,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 6- dense-raw 5-1,text,false,,2202,0,1,6,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998554,1,dense-indexed,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 7- dense-indexed 6-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998555,1,sparse-raw,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 8- sparse-raw 7-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998556,1,sparse-indexed,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 9- sparse-indexed 8-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876998553,482,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,8,null,0,0,0
+1692876998555,480,set-search-name,200,OK,Thread Group 6- dense-raw 5-1,text,true,,0,0,1,8,null,0,0,0
+1692876998553,482,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,8,null,0,0,0
+1692876998556,479,set-search-name,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,0,0,1,8,null,0,0,0
+1692876998552,483,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1692876998559,476,set-search-name,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,0,0,1,8,null,0,0,0
+1692876998555,480,set-search-name,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,0,0,1,8,null,0,0,0
+1692876998553,482,set-search-name,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,0,0,1,8,null,0,0,0
+1692876999035,1,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 3- tstats1 3-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692876999035,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 4- tstats2 4-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692876999035,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 8- sparse-raw 7-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692876999035,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 6- dense-raw 5-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692876999035,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 2 - rare-wildcard 2-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692876999035,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 1 -  rare-exact 1-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692876999035,3,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 9- sparse-indexed 8-1,text,false,,2202,0,1,2,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,3
+1692876999035,4,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 7- dense-indexed 6-1,text,false,,2202,0,1,2,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,4
+1692877073220,28,reset-lookup-file,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl: Temporary failure in name resolution,setUp Thread Group 1-1,text,false,,2499,0,1,1,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,28
+1692877073275,1,tstats1,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 3- tstats1 3-1,text,false,,2202,0,1,4,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073274,1,rare-search-exact,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 1 -  rare-exact 1-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073274,1,rare-search-wildcard,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 2 - rare-wildcard 2-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073276,1,tstats2,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 4- tstats2 4-1,text,false,,2202,0,1,6,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073277,1,dense-raw,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 6- dense-raw 5-1,text,false,,2202,0,1,6,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073277,1,dense-indexed,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 7- dense-indexed 6-1,text,false,,2202,0,1,7,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073279,1,sparse-raw,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 8- sparse-raw 7-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073279,1,sparse-indexed,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 9- sparse-indexed 8-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073281,479,set-search-name,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,0,0,1,8,null,0,0,0
+1692877073280,480,set-search-name,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,0,0,1,8,null,0,0,0
+1692877073278,482,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,8,null,0,0,0
+1692877073279,482,set-search-name,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,0,0,1,8,null,0,0,0
+1692877073278,482,set-search-name,200,OK,Thread Group 6- dense-raw 5-1,text,true,,0,0,1,8,null,0,0,0
+1692877073277,483,set-search-name,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,0,0,1,8,null,0,0,0
+1692877073277,483,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,8,null,0,0,0
+1692877073277,483,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1692877073762,1,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 3- tstats1 3-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073762,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 1 -  rare-exact 1-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073762,1,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 6- dense-raw 5-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,1
+1692877073762,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 4- tstats2 4-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692877073762,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 9- sparse-indexed 8-1,text,false,,2202,0,1,8,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692877073762,2,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 8- sparse-raw 7-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,2
+1692877073762,3,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 2 - rare-wildcard 2-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,3
+1692877073762,3,capture-search-metrics,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: i3en6xl,Thread Group 7- dense-indexed 6-1,text,false,,2202,0,1,3,https://i3en6xl:8089/servicesNS/admin/search/search/jobs/export,0,0,3
+1692877138414,213,reset-lookup-file,200,OK,setUp Thread Group 1-1,text,true,,397,393,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,210,0,139
+1692877138654,13777,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,410,460,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,13764,0,19
+1692877152432,489,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1692877152921,64,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,7102,746,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,49,0,0
+1692877138657,21028,tstats2,200,OK,Thread Group 4- tstats2 4-1,text,true,,21225,634,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,21010,0,25
+1692877159685,8,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,7,null,0,0,0
+1692877138656,21047,tstats1,200,OK,Thread Group 3- tstats1 3-1,text,true,,21151,634,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,21033,0,17
+1692877159702,9,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,7,null,0,0,0
+1692877159694,138,capture-search-metrics,200,OK,Thread Group 4- tstats2 4-1,text,true,,7685,743,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,125,0,0
+1692877159712,133,capture-search-metrics,200,OK,Thread Group 3- tstats1 3-1,text,true,,7664,743,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,118,0,0
+1692877138655,46669,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,411,457,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,46660,0,28
+1692877185325,10,set-search-name,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,0,0,1,5,null,0,0,0
+1692877185335,117,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,7552,749,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,104,0,0
+1692877138659,46942,sparse-indexed,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,239689,487,1,4,https://localhost:8089/servicesNS/admin/search/search/jobs/export,46917,0,21
+1692877185601,7,set-search-name,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,0,0,1,4,null,0,0,0
+1692877185609,120,capture-search-metrics,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,8209,750,1,4,https://localhost:8089/servicesNS/admin/search/search/jobs/export,106,0,0
+1692877138658,48412,sparse-raw,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,1610624,471,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,48250,0,24
+1692877187070,11,set-search-name,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,0,0,1,3,null,0,0,0
+1692877187081,123,capture-search-metrics,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,8278,746,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,109,0,0
+1692877138658,56999,dense-indexed,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,16557911,461,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,55723,0,21
+1692877195657,7,set-search-name,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,0,0,1,2,null,0,0,0
+1692877195665,114,capture-search-metrics,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,8401,749,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,102,0,0
+1692877138657,102127,dense-raw,200,OK,Thread Group 6- dense-raw 5-1,text,true,,16707137,483,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,100848,0,23
+1692877240784,7,set-search-name,200,OK,Thread Group 6- dense-raw 5-1,text,true,,0,0,1,1,null,0,0,0
+1692877240792,121,capture-search-metrics,200,OK,Thread Group 6- dense-raw 5-1,text,true,,8768,745,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,109,0,8
