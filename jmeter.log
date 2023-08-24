@@ -1,41 +1,40 @@
-2023-08-24 19:13:57,796 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2023-08-24 19:13:57,855 INFO o.a.j.JMeter: Loading user properties from: /Users/tmuth/Downloads/apache-jmeter-5.6.2/bin/user.properties
-2023-08-24 19:13:57,858 INFO o.a.j.JMeter: Loading system properties from: /Users/tmuth/Downloads/apache-jmeter-5.6.2/bin/system.properties
-2023-08-24 19:13:57,870 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
-2023-08-24 19:13:57,870 INFO o.a.j.JMeter: Version 5.6.2
-2023-08-24 19:13:57,870 INFO o.a.j.JMeter: java.version=11.0.11
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: os.name=Mac OS X
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: os.arch=x86_64
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: os.version=11.4
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: file.encoding=UTF-8
-2023-08-24 19:13:57,871 INFO o.a.j.JMeter: java.awt.headless=null
-2023-08-24 19:13:57,872 INFO o.a.j.JMeter: Max memory     =1073741824
-2023-08-24 19:13:57,872 INFO o.a.j.JMeter: Available Processors =8
-2023-08-24 19:13:57,881 INFO o.a.j.JMeter: Default Locale=English (EN)
-2023-08-24 19:13:57,881 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2023-08-24 19:13:57,881 INFO o.a.j.JMeter: JMeterHome=/Users/tmuth/Downloads/apache-jmeter-5.6.2
-2023-08-24 19:13:57,882 INFO o.a.j.JMeter: user.dir  =/Users/tmuth/Documents/GitHub/s2-iotesting
-2023-08-24 19:13:57,882 INFO o.a.j.JMeter: PWD       =/Users/tmuth/Documents/GitHub/s2-iotesting
-2023-08-24 19:13:57,894 INFO o.a.j.JMeter: IP: 10.115.1.73 Name: TYLERs-Air.myfiosgateway.com FullName: tylers-air.myfiosgateway.com
-2023-08-24 19:13:57,912 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2023-08-24 19:13:59,345 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
-2023-08-24 19:14:12,586 INFO o.a.j.s.FileServer: Default base='/Users/tmuth/Documents/GitHub/s2-iotesting'
-2023-08-24 19:14:12,591 INFO o.a.j.g.a.Load: Loading file: /Users/tmuth/Documents/GitHub/s2-iotesting/jmeter-s2-single-search.jmx
-2023-08-24 19:14:12,592 INFO o.a.j.s.FileServer: Set new base='/Users/tmuth/Documents/GitHub/s2-iotesting'
-2023-08-24 19:14:12,856 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2023-08-24 19:14:13,160 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2023-08-24 19:14:13,163 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2023-08-24 19:14:13,164 INFO o.a.j.s.SaveService: Loading file: /Users/tmuth/Documents/GitHub/s2-iotesting/jmeter-s2-single-search.jmx
-2023-08-24 19:14:13,219 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-24 19:14:13,219 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-24 19:14:13,220 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-24 19:14:13,220 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2023-08-24 19:14:13,220 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2023-08-24 19:14:13,220 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2023-08-24 19:14:16,289 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2023-08-24 19:14:16,290 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2023-08-24 19:14:16,291 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2023-08-24 19:14:16,291 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2023-08-24 19:14:16,720 INFO o.a.j.s.FileServer: Set new base='/Users/tmuth/Documents/GitHub/s2-iotesting'
-2023-08-24 19:17:16,514 INFO o.a.j.g.a.What: TestElement: class org.apache.jmeter.threads.ThreadGroup, guiClassName: org.apache.jmeter.threads.gui.ThreadGroupGui
+2023-08-24 19:55:21,854 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-08-24 19:55:21,888 INFO o.a.j.JMeter: Loading user properties from: /Users/tmuth/Downloads/apache-jmeter-5.6.2/bin/user.properties
+2023-08-24 19:55:21,890 INFO o.a.j.JMeter: Loading system properties from: /Users/tmuth/Downloads/apache-jmeter-5.6.2/bin/system.properties
+2023-08-24 19:55:21,901 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: Version 5.6.2
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: java.version=11.0.11
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: os.name=Mac OS X
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: os.arch=x86_64
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: os.version=11.4
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: java.awt.headless=null
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-08-24 19:55:21,902 INFO o.a.j.JMeter: Available Processors =8
+2023-08-24 19:55:21,914 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-08-24 19:55:21,915 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-08-24 19:55:21,915 INFO o.a.j.JMeter: JMeterHome=/Users/tmuth/Downloads/apache-jmeter-5.6.2
+2023-08-24 19:55:21,915 INFO o.a.j.JMeter: user.dir  =/Users/tmuth/Documents/GitHub/s2-iotesting
+2023-08-24 19:55:21,916 INFO o.a.j.JMeter: PWD       =/Users/tmuth/Documents/GitHub/s2-iotesting
+2023-08-24 19:55:21,927 INFO o.a.j.JMeter: IP: 10.115.1.73 Name: TYLERs-Air.myfiosgateway.com FullName: tylers-air.myfiosgateway.com
+2023-08-24 19:55:21,946 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2023-08-24 19:55:22,566 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2023-08-24 19:55:36,496 INFO o.a.j.s.FileServer: Default base='/Users/tmuth/Documents/GitHub/s2-iotesting'
+2023-08-24 19:55:36,502 INFO o.a.j.g.a.Load: Loading file: /Users/tmuth/Documents/GitHub/s2-iotesting/jmeter-s2-single-search.jmx
+2023-08-24 19:55:36,502 INFO o.a.j.s.FileServer: Set new base='/Users/tmuth/Documents/GitHub/s2-iotesting'
+2023-08-24 19:55:36,752 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-08-24 19:55:36,978 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-08-24 19:55:36,982 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-08-24 19:55:36,983 INFO o.a.j.s.SaveService: Loading file: /Users/tmuth/Documents/GitHub/s2-iotesting/jmeter-s2-single-search.jmx
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-08-24 19:55:37,040 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-08-24 19:55:40,159 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-08-24 19:55:40,160 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-08-24 19:55:40,160 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-08-24 19:55:40,160 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-08-24 19:55:40,580 INFO o.a.j.s.FileServer: Set new base='/Users/tmuth/Documents/GitHub/s2-iotesting'
