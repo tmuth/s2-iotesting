@@ -253,7 +253,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="search" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">search index=${INDEX_NAME} earliest=&quot;${EARLIEST}&quot; latest=&quot;${LATEST}&quot; &quot;abcdef&quot; | stats count</stringProp>
+                  <stringProp name="Argument.value">search index=${INDEX_NAME} earliest=&quot;${EARLIEST}&quot; latest=&quot;${LATEST}&quot; &quot;*abcdef*&quot; | stats count</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">search</stringProp>
@@ -942,12 +942,12 @@
           </elementProp>
           <elementProp name="EARLIEST" elementType="Argument">
             <stringProp name="Argument.name">EARLIEST</stringProp>
-            <stringProp name="Argument.value">01/10/2023:06:00:00</stringProp>
+            <stringProp name="Argument.value">${__P(EARLIEST, 01/10/2023:06:00:00)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LATEST" elementType="Argument">
             <stringProp name="Argument.name">LATEST</stringProp>
-            <stringProp name="Argument.value">01/12/2023:22:00:00</stringProp>
+            <stringProp name="Argument.value">${__P(LATEST, 01/12/2023:22:00:00)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="OUTPUT_LOOKUP_FILE" elementType="Argument">
