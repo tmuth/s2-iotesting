@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1692921581018,282,reset-lookup-file,200,OK,setUp Thread Group 1-1,text,true,,397,401,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,279,0,150
+1692921581324,55747,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,411,457,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,55736,0,12
+1692921637071,361,set-search-name,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,0,0,1,1,null,0,0,0
+1692921637433,44,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,7486,755,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,31,0,0

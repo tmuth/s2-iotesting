@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023-08-25 20:48:50,034 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
 2023-08-25 20:48:50,046 INFO o.a.j.JMeter: Loading user properties from: /root/download/apache-jmeter-5.6.2/bin/user.properties
 2023-08-25 20:48:50,047 INFO o.a.j.JMeter: Loading system properties from: /root/download/apache-jmeter-5.6.2/bin/system.properties
@@ -136,3 +137,72 @@
 2023-08-25 20:50:52,843 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
 2023-08-25 20:50:52,846 INFO o.a.j.r.Summariser: summary +     14 in 00:01:51 =    0.1/s Avg: 15431 Min:    10 Max: 121527 Err:     0 (0.00%) Active: 0 Started: 8 Finished: 8
 2023-08-25 20:50:52,847 INFO o.a.j.r.Summariser: summary =     24 in 00:02:02 =    0.2/s Avg:  9815 Min:    10 Max: 121527 Err:     0 (0.00%)
+=======
+2023-08-25 20:53:15,288 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-08-25 20:53:15,302 INFO o.a.j.JMeter: Loading user properties from: /root/download/apache-jmeter-5.6.2/bin/user.properties
+2023-08-25 20:53:15,302 INFO o.a.j.JMeter: Loading system properties from: /root/download/apache-jmeter-5.6.2/bin/system.properties
+2023-08-25 20:53:15,302 INFO o.a.j.JMeter: Setting JMeter property: INDEX_NAME=git
+2023-08-25 20:53:15,302 INFO o.a.j.JMeter: Setting JMeter property: OUTPUT_LOOKUP_FILE=test_azure_single_c.csv
+2023-08-25 20:53:15,302 INFO o.a.j.JMeter: Setting JMeter property: LATEST=01/18/2023:22:00:00
+2023-08-25 20:53:15,306 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-08-25 20:53:15,306 INFO o.a.j.JMeter: Version 5.6.2
+2023-08-25 20:53:15,306 INFO o.a.j.JMeter: java.version=17.0.8
+2023-08-25 20:53:15,306 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2023-08-25 20:53:15,306 INFO o.a.j.JMeter: os.name=Linux
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: os.arch=amd64
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: os.version=5.15.0-1042-azure
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: file.encoding=UTF-8
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: java.awt.headless=true
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-08-25 20:53:15,307 INFO o.a.j.JMeter: Available Processors =32
+2023-08-25 20:53:15,313 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-08-25 20:53:15,313 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-08-25 20:53:15,313 INFO o.a.j.JMeter: JMeterHome=/root/download/apache-jmeter-5.6.2
+2023-08-25 20:53:15,313 INFO o.a.j.JMeter: user.dir  =/home/azureuser/s2-iotesting
+2023-08-25 20:53:15,313 INFO o.a.j.JMeter: PWD       =/home/azureuser/s2-iotesting
+2023-08-25 20:53:15,327 INFO o.a.j.JMeter: IP: 10.0.0.4 Name: azure-s2-test1 FullName: azure-s2-test1.internal.cloudapp.net
+2023-08-25 20:53:15,335 INFO o.a.j.s.FileServer: Default base='/home/azureuser/s2-iotesting'
+2023-08-25 20:53:15,336 INFO o.a.j.s.FileServer: Set new base='/home/azureuser/s2-iotesting'
+2023-08-25 20:53:15,463 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-08-25 20:53:15,481 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-08-25 20:53:15,483 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-08-25 20:53:15,486 INFO o.a.j.s.SaveService: Loading file: jmeter-s2-single-search.jmx
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-08-25 20:53:15,524 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-08-25 20:53:15,572 INFO o.a.j.JMeter: Creating summariser <summary>
+2023-08-25 20:53:15,580 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-08-25 20:53:15,580 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-25 20:53:15,581 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-25 20:53:15,584 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-08-25 20:53:15,584 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-08-25 20:53:15,740 INFO o.a.j.JMeter: Running test (1692996795740)
+2023-08-25 20:53:15,758 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group 2 - rare-wildcard
+2023-08-25 20:53:15,758 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group 2 - rare-wildcard.
+2023-08-25 20:53:15,758 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-08-25 20:53:15,758 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-08-25 20:53:15,762 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-25 20:53:15,762 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-08-25 20:53:15,763 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 2 - rare-wildcard 1-1
+2023-08-25 20:53:15,774 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = azure-s2-test1
+2023-08-25 20:53:15,778 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-08-25 20:53:15,779 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-08-25 20:53:15,779 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-08-25 20:53:15,779 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-08-25 20:53:15,779 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-08-25 20:53:15,838 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2023-08-25 20:53:15,841 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2023-08-25 20:53:15,841 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2023-08-25 20:53:15,875 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2023-08-25 20:53:15,877 INFO o.a.j.u.SSLManager: KeyStore created OK
+2023-08-25 20:53:15,877 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2023-08-25 20:54:02,832 INFO o.a.j.r.Summariser: summary +      1 in 00:00:47 =    0.0/s Avg: 47011 Min: 47011 Max: 47011 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2023-08-25 20:54:03,230 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 2 - rare-wildcard 1-1
+2023-08-25 20:54:03,230 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 2 - rare-wildcard 1-1
+2023-08-25 20:54:03,232 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-08-25 20:54:03,235 INFO o.a.j.r.Summariser: summary +      2 in 00:00:00 =    5.0/s Avg:   198 Min:    42 Max:   354 Err:     0 (0.00%) Active: 0 Started: 1 Finished: 1
+2023-08-25 20:54:03,235 INFO o.a.j.r.Summariser: summary =      3 in 00:00:47 =    0.1/s Avg: 15802 Min:    42 Max: 47011 Err:     0 (0.00%)
+>>>>>>> 16f40564067ffd78830c738cc16edd7bb6f7cec3
