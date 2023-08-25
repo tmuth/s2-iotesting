@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1692920526832,278,reset-lookup-file,200,OK,setUp Thread Group 1-1,text,true,,397,403,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,275,0,144
+1692920527134,52500,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,412,457,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,52492,0,13
+1692920579635,358,set-search-name,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,0,0,1,1,null,0,0,0
+1692920579994,43,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,7542,757,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,35,0,0
+1692921310177,222,reset-lookup-file,200,OK,setUp Thread Group 1-1,text,true,,397,401,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,219,0,140
+1692921310425,55195,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,412,457,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,55186,0,13
+1692921365624,346,set-search-name,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,0,0,1,1,null,0,0,0
+1692921365971,39,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,7645,755,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,32,0,0

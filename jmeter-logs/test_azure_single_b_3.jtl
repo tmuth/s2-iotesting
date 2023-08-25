@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1692996461081,48503,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,413,458,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,48491,0,143
+1692996509587,351,set-search-name,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,0,0,1,1,null,0,0,0
+1692996509938,41,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 1-1,text,true,,7614,756,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,33,0,0
