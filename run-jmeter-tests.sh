@@ -1,17 +1,10 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-INDEX_NAME=test_s2_io2
-HOME_PATH_PREFIX=/mnt/io2/splunk
+INDEX_NAME=test_high_cardinality_compressed1
+HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/10/2023:06:00:00"
 LATEST="01/12/2023:22:00:00"
-NAME_PREFIX="aws_io2_a_"
-=======
-INDEX_NAME=git
-EARLIEST="01/10/2023:06:00:00"
-LATEST="01/12/2023:22:00:00"
-NAME_PREFIX="azure_a_"
->>>>>>> 16f40564067ffd78830c738cc16edd7bb6f7cec3
+NAME_PREFIX="aws_g_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
@@ -31,7 +24,6 @@ function set_io_limit {
 
 function evict_cache {
     echo "evict cache for ${INDEX_NAME} "
-    # splunk _internal call /services/admin/cacheman/_evict -post:mb 1000000000 -post:path /mnt/nvme/splunk/${INDEX_NAME} -method POST -auth 'admin:welcome1'
     splunk _internal call /services/admin/cacheman/_evict -post:mb 1000000000 -post:path ${HOME_PATH_PREFIX}/${INDEX_NAME} -method POST -auth 'admin:welcome1'
     du -sh /mnt/nvme/splunk/* | grep ${INDEX_NAME}
 }
@@ -47,8 +39,8 @@ function run_jmeter {
 
 
 
-# for i in 3000M 100M 200M 400M 700M
-for i in 3000M
+for i in 3000M 100M 200M 400M 700M
+#for i in 3000M
 do
    echo "About to run ${i}"
    set_io_limit ${i}
