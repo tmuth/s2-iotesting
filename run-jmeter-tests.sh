@@ -3,8 +3,8 @@
 INDEX_NAME=test_high_cardinality_compressed1
 HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/10/2023:06:00:00"
-LATEST="01/12/2023:22:00:00"
-NAME_PREFIX="aws_k_"
+LATEST="01/19/2023:22:00:00"
+NAME_PREFIX="aws_9day_b_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
@@ -43,7 +43,8 @@ function run_jmeter {
 
 
 
-for i in 100M 200M 400M 700M 3000M
+#for i in 100M 200M 400M 700M 3000M
+for i in 100M 400M 3000M
 #for i in 3000M
 do
    echo "About to run ${i}"
