@@ -4,7 +4,7 @@ INDEX_NAME=test_high_cardinality_compressed1
 HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/10/2023:06:00:00"
 LATEST="01/12/2023:22:00:00"
-NAME_PREFIX="aws_g_"
+NAME_PREFIX="aws_j_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
@@ -20,6 +20,10 @@ function set_io_limit {
     IO_READ_LIMIT_BYTES=$(systemctl show --property IOReadBandwidthMax Splunkd.service | awk -F ' ' '{print $2}')
     IO_READ_LIMIT_MB=$(expr $IO_READ_LIMIT_BYTES / 1000 / 1000)
     echo "IO_READ_LIMIT_MB: ${IO_READ_LIMIT_MB}"
+}
+
+function drop_system_cache {
+    echo 3 > /proc/sys/vm/drop_caches
 }
 
 function evict_cache {
@@ -39,12 +43,13 @@ function run_jmeter {
 
 
 
-for i in 3000M 100M 200M 400M 700M
+for i in 100M 200M 400M 700M 3000M
 #for i in 3000M
 do
    echo "About to run ${i}"
    set_io_limit ${i}
    evict_cache
+   drop_system_cache
    run_jmeter "${i}" "uncached" "true"
    run_jmeter "${i}" "cached" "false"
 done
