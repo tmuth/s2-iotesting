@@ -4,7 +4,7 @@ INDEX_NAME=test_high_cardinality_compressed1
 HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/01/2023:06:00:00"
 LATEST="01/31/2023:22:00:00"
-NAME_PREFIX="aws_31day_a_"
+NAME_PREFIX="aws_31day_b_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
