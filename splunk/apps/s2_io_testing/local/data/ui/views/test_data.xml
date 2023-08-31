@@ -11,8 +11,17 @@
 				"primary": "ds_37Cb1Dv9"
 			},
 			"title": "Times by I/O Limit, Search Type and Cached (true) vs Uncached (false)",
-			"options": {},
-			"context": {},
+			"options": {
+				"dataValuesDisplay": "all",
+				"xAxisLabelRotation": 45,
+				"yAxisMajorTickSize": 1,
+				"yAxisMajorTickInterval": 1,
+				"showYMinorGridLines": true,
+				"yAxisMinorTickSize": 2,
+				"xAxisLabelVisibility": "show",
+				"xAxisTitleVisibility": "hide",
+				"yAxisTitleText": "seconds"
+			},
 			"showProgressBar": false,
 			"showLastUpdated": false
 		},
@@ -33,14 +42,22 @@
 		"ds_37Cb1Dv9": {
 			"type": "ds.search",
 			"options": {
-				"query": "| `test-lookups`\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true\"\n| fields - _raw \n| search search_name !=\"dense*\"\n| search io_limit IN ($io_limit$)\n| search search_name IN ($search_type$)\n| search cached IN ($cached$)\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1)\n| eval test_name=search_name+\"_\"+cached\n| table sid,runDuration,test_name,io_limit,search_name,cached,search.index.bucketcache.miss.duration_secs,search.index.bucketcache.hit.invocations,search.index.bucketcache.miss.invocations,searchTotalBucketsCount,searchTotalBucketsCount, eventsScannedPerSec\n| sort search_type,cached,io_limit\n| chart max(runDuration) over test_name by io_limit"
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files \n| rex field=title \"(?<test_name>.+)(\\_\\d{3,4}M\\.csv)\"\n| search test_name = $test_name$\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true\"\n| fields - _raw \n```| search search_name !=\"dense*\"```\n| search io_limit IN ($io_limit$)\n| search search_name IN ($search_type$)\n| search cached IN ($cached$)\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1)\n| eval test_name=search_name+\"_\"+cached\n| table sid,runDuration,test_name,io_limit,search_name,cached,search.index.bucketcache.miss.duration_secs,search.index.bucketcache.hit.invocations,search.index.bucketcache.miss.invocations,searchTotalBucketsCount,searchTotalBucketsCount, eventsScannedPerSec\n| eval io_limit_int = toNumber(replace(io_limit,\"M\",\"\"))\n| sort io_limit_int\n| chart max(runDuration)  over test_name by io_limit\n\n| fields test_name,100M 200M 400M 700M 3000M",
+				"queryParameters": {
+					"earliest": "0",
+					"latest": ""
+				}
 			},
 			"name": "Search_1"
 		},
 		"ds_GIhocW20": {
 			"type": "ds.search",
 			"options": {
-				"query": "| `test-lookups`\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| search search_name !=\"dense*\"\n| search io_limit IN ($io_limit$)\n| search search_name IN ($search_type$)\n| search cached IN ($cached$)\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1) \n| eval test_name=search_name+\"_\"+cached,published2=strptime(published, \"%Y-%m-%dT%H:%M:%S.%N\") \n| eval finished=strftime((published2+runDuration),\"%Y-%m-%dT%H:%M:%S.%N\") \n| table published,runDuration,finished,search_name,test_name,cached,sname,secondInterval,io_limit \n| stats min(published) as min_time ,max(finished) as max_time by io_limit,cached \n| eval min_t = strptime(min_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval max_t = strptime(max_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval diff = tostring((max_t - min_t), \"duration\") \n| eval duration=strptime(diff,\"%H:%M:%S.%2N\") \n| eval base=strptime(\"00:00:00.00\",\"%H:%M:%S.%2N\") \n| eval secs=duration-base  \n| chart max(secs) as seconds by io_limit,cached"
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files \n| rex field=title \"(?<test_name>.+)(\\_\\d{3,4}M\\.csv)\"\n| search test_name = $test_name$\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| search search_name !=\"dense*\"\n| search io_limit IN ($io_limit$)\n| search search_name IN ($search_type$)\n| search cached IN ($cached$)\n| eval runDuration = round(runDuration,1), eventsScannedPerSec=round((scanCount / exact(runDuration)),1) \n| eval test_name=search_name+\"_\"+cached,published2=strptime(published, \"%Y-%m-%dT%H:%M:%S.%N\") \n| eval finished=strftime((published2+runDuration),\"%Y-%m-%dT%H:%M:%S.%N\") \n| table published,runDuration,finished,search_name,test_name,cached,sname,secondInterval,io_limit \n| stats min(published) as min_time ,max(finished) as max_time by io_limit,cached \n| eval min_t = strptime(min_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval max_t = strptime(max_time, \"%Y-%m-%dT%H:%M:%S.%3N\") \n| eval diff = tostring((max_t - min_t), \"duration\") \n| eval duration=strptime(diff,\"%H:%M:%S.%2N\") \n| eval base=strptime(\"00:00:00.00\",\"%H:%M:%S.%2N\") \n| eval secs=duration-base  \n| chart max(secs) as seconds by io_limit,cached",
+				"queryParameters": {
+					"earliest": "0",
+					"latest": ""
+				}
 			},
 			"name": "Search_2"
 		},
@@ -61,7 +78,7 @@
 		"ds_dK1Zqei7": {
 			"type": "ds.search",
 			"options": {
-				"query": "| `test-lookups`\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| fields io_limit\n| dedup io_limit\n| eval io_limit_sort = replace(io_limit,\"M\",\"\")\n| sort io_limit_sort\n| fields - io_limit_sort\n| table io_limit",
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files \n| rex field=title \"(?<test_name>.+)(\\_\\d{3,4}M\\.csv)\"\n| search test_name = $test_name$\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| fields io_limit\n| dedup io_limit\n| eval io_limit_sort = replace(io_limit,\"M\",\"\")\n| sort io_limit_sort\n| fields - io_limit_sort\n| table io_limit",
 				"queryParameters": {
 					"earliest": "0",
 					"latest": ""
@@ -72,9 +89,24 @@
 		"ds_uxj43Bw2": {
 			"type": "ds.search",
 			"options": {
-				"query": "| `test-lookups`\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| fields search_name\n| search search_name != \"dense*\"\n| dedup search_name\n| sort search_name"
+				"query": "| `test-lookups`\n| map maxsearches=100 search=\"| inputlookup $$title$$ append=true | eval sname=$$title$$\" \n| fields - _raw \n| fields search_name\n```| search search_name != \"dense*\"```\n| dedup search_name\n| sort search_name",
+				"queryParameters": {
+					"earliest": "0",
+					"latest": ""
+				}
 			},
 			"name": "search_type_search"
+		},
+		"ds_qN1wB2m9": {
+			"type": "ds.search",
+			"options": {
+				"query": "| rest/servicesNS/-/-/data/lookup-table-files \n| rex field=title \"(?<test_name>.+)(\\_\\d{3,4}M\\.csv)\"\n| dedup test_name\n| table test_name\n| sort test_name",
+				"queryParameters": {
+					"earliest": "0",
+					"latest": ""
+				}
+			},
+			"name": "test_name"
 		}
 	},
 	"defaults": {
@@ -90,14 +122,6 @@
 		}
 	},
 	"inputs": {
-		"input_global_trp": {
-			"type": "input.timerange",
-			"options": {
-				"token": "global_time",
-				"defaultValue": "0,"
-			},
-			"title": "Global Time Range"
-		},
 		"input_VwqCQwQa": {
 			"options": {
 				"items": ">frame(label, value) | prepend(formattedStatics) | objects()",
@@ -169,6 +193,23 @@
 			},
 			"title": "Cached",
 			"type": "input.multiselect"
+		},
+		"input_gO6Z1OOt": {
+			"options": {
+				"items": [
+					{
+						"label": "- select -",
+						"value": "none"
+					}
+				],
+				"defaultValue": "none",
+				"token": "test_name"
+			},
+			"title": "Test Run",
+			"type": "input.dropdown",
+			"dataSources": {
+				"primary": "ds_qN1wB2m9"
+			}
 		}
 	},
 	"layout": {
@@ -200,7 +241,7 @@
 			}
 		],
 		"globalInputs": [
-			"input_global_trp",
+			"input_gO6Z1OOt",
 			"input_VwqCQwQa",
 			"input_9Q7vj3du",
 			"input_oD0bu2tO"
