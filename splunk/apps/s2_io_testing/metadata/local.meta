@@ -16,7 +16,7 @@ modtime = 1691926588.495850000
 [views/test_data]
 owner = admin
 version = 9.1.0.2
-modtime = 1693012557.324511000
+modtime = 1693257957.111710000
 
 [views/azure_vs_aws]
 access = read : [ * ], write : [ admin, power ]
@@ -24,3 +24,10 @@ export = none
 owner = admin
 version = 9.1.0.2
 modtime = 1692999424.557787000
+
+[views/test_data_compare_runs]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 9.1.0.2
+modtime = 1693258032.540761000
