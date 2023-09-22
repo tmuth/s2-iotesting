@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INDEX_NAME=test_high_cardinality_compressed1
+INDEX_NAME=git
 HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/01/2023:06:00:00"
 LATEST="01/02/2023:22:00:00"
@@ -48,7 +48,7 @@ function run_jmeter {
 for i in 5000M
 do
    echo "About to run ${i}"
-   set_io_limit ${i}
+   #set_io_limit ${i}
    evict_cache
    drop_system_cache
    run_jmeter "${i}" "uncached" "true"
