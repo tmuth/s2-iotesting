@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1695222912861,110460,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,412,493,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,110442,0,414
+1695223023329,691,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1695223024021,102,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,6597,751,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,88,0,16
+1695223230978,6825,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,412,493,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,6811,0,456
+1695223237820,494,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1695223238315,55,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,6354,751,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,48,0,0
+1695223593333,11551,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,412,493,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,11537,0,472
+1695223604904,545,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1695223605450,68,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,6503,751,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,59,0,0
+1695223593333,1116214,tstats1,200,OK,Thread Group 3- tstats1 3-1,text,true,,13559,667,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,1116195,0,472
+1695224709548,11,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,7,null,0,0,0
+1695224709560,97,capture-search-metrics,200,OK,Thread Group 3- tstats1 3-1,text,true,,8052,748,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,88,0,14
+1695223593333,1116481,tstats2,200,OK,Thread Group 4- tstats2 4-1,text,true,,13951,667,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,1116460,0,472
+1695224709815,12,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,6,null,0,0,0
+1695224709827,176,capture-search-metrics,200,OK,Thread Group 4- tstats2 4-1,text,true,,8056,748,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,167,0,11
