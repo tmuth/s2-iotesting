@@ -38,3 +38,10 @@ export = none
 owner = admin
 version = 9.1.0.2
 modtime = 1693357706.676353000
+
+[views/azure_l32s_v2_vs_azure_l32s_v3]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 9.1.0.2
+modtime = 1693595890.054523000
