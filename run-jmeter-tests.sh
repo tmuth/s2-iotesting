@@ -2,9 +2,9 @@
 
 INDEX_NAME=test_s2_gp2
 HOME_PATH_PREFIX=/mnt/gp2/splunk
-EARLIEST="01/01/2023:06:00:00"
-LATEST="01/02/2023:22:00:00"
-NAME_PREFIX="test_gp2_c"
+EARLIEST="01/10/2023:06:00:00"
+LATEST="01/12/2023:22:00:00"
+NAME_PREFIX="aws_gp2_c_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
@@ -45,7 +45,7 @@ function run_jmeter {
 
 #for i in 100M 200M 400M 700M 3000M
 # for i in 100M 400M 3000M
-for i in 5000M
+for i in 3000M
 do
    echo "About to run ${i}"
    #set_io_limit ${i}
