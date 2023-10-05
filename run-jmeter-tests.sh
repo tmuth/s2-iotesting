@@ -1,10 +1,10 @@
 #!/bin/bash
 
-INDEX_NAME=git
-HOME_PATH_PREFIX=/mnt/nvme/splunk
+INDEX_NAME=test_s2_gp2
+HOME_PATH_PREFIX=/mnt/gp2/splunk
 EARLIEST="01/01/2023:06:00:00"
 LATEST="01/02/2023:22:00:00"
-NAME_PREFIX="test_a"
+NAME_PREFIX="test_gp2_c"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""
@@ -29,7 +29,7 @@ function drop_system_cache {
 function evict_cache {
     echo "evict cache for ${INDEX_NAME} "
     splunk _internal call /services/admin/cacheman/_evict -post:mb 1000000000 -post:path ${HOME_PATH_PREFIX}/${INDEX_NAME} -method POST -auth 'admin:welcome1'
-    du -sh /mnt/nvme/splunk/* | grep ${INDEX_NAME}
+    du -sh ${HOME_PATH_PREFIX}/* | grep ${INDEX_NAME}
 }
 
 function run_jmeter {
