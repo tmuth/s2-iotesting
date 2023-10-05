@@ -5,7 +5,7 @@ HOSTNAME=`hostname`
 if [ "$HOSTNAME" = i3en6xl ]; then
     printf '%s\n' "Running on $HOSTNAME"
     sudo rsync -avzh /opt/splunk/etc/system/local ~/s2-iotesting/splunk/system
-    sudo rsync -avzh /opt/splunk/etc/apps/search/lookups/aws*.csv ~/s2-iotesting/splunk/lookups/
+    sudo rsync -avzh /opt/splunk/etc/apps/search/lookups/*.csv ~/s2-iotesting/splunk/lookups/
     sudo chown -R ec2-user:ec2-user $DEST_BASE/*
 fi
 
