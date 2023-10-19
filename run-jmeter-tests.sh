@@ -1,10 +1,10 @@
 #!/bin/bash
 
-INDEX_NAME=test_s2_nvme1
+INDEX_NAME=git
 HOME_PATH_PREFIX=/mnt/nvme/splunk
 EARLIEST="01/10/2023:06:00:00"
 LATEST="01/12/2023:22:00:00"
-NAME_PREFIX="aws_nvme_c_"
+NAME_PREFIX="azure_v3_nosmt_b_"
 
 IO_READ_LIMIT_BYTES=""
 IO_READ_LIMIT_MB=""

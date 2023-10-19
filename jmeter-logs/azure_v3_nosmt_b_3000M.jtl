@@ -1,0 +1,49 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1697731793865,17583,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,410,462,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,17572,0,217
+1697731811452,657,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1697731812110,60,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,7172,761,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,46,0,0
+1697731793865,27484,tstats1,200,OK,Thread Group 3- tstats1 3-1,text,true,,20969,636,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,27471,0,217
+1697731821349,8,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,7,null,0,0,0
+1697731793865,27540,tstats2,200,OK,Thread Group 4- tstats2 4-1,text,true,,21023,636,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,27526,0,217
+1697731821406,16,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,7,null,0,0,0
+1697731821358,129,capture-search-metrics,200,OK,Thread Group 3- tstats1 3-1,text,true,,7677,758,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,120,0,0
+1697731821422,130,capture-search-metrics,200,OK,Thread Group 4- tstats2 4-1,text,true,,7677,758,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,119,0,0
+1697731793865,56305,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,412,460,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,56296,0,217
+1697731850172,7,set-search-name,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,0,0,1,5,null,0,0,0
+1697731850179,132,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,7622,764,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,105,0,0
+1697731793865,56535,sparse-indexed,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,237346,489,1,4,https://localhost:8089/servicesNS/admin/search/search/jobs/export,56516,0,217
+1697731850401,7,set-search-name,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,0,0,1,4,null,0,0,0
+1697731850409,116,capture-search-metrics,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,8215,765,1,4,https://localhost:8089/servicesNS/admin/search/search/jobs/export,105,0,0
+1697731793865,58052,sparse-raw,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,1578611,473,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,57916,0,217
+1697731851919,7,set-search-name,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,0,0,1,3,null,0,0,0
+1697731851927,118,capture-search-metrics,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,8168,761,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,104,0,0
+1697731793865,63517,dense-indexed,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,16680557,463,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,62238,0,217
+1697731857384,7,set-search-name,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,0,0,1,2,null,0,0,0
+1697731857391,122,capture-search-metrics,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,8416,764,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,111,0,9
+1697731793865,99373,dense-raw,200,OK,Thread Group 6- dense-raw 5-1,text,true,,16608366,485,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,98110,0,217
+1697731893240,6,set-search-name,200,OK,Thread Group 6- dense-raw 5-1,text,true,,0,0,1,1,null,0,0,0
+1697731893246,119,capture-search-metrics,200,OK,Thread Group 6- dense-raw 5-1,text,true,,8713,760,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,111,0,8
+1697731896290,459,rare-search-exact,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,410,462,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,448,0,200
+1697731896290,877,rare-search-wildcard,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,412,460,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,841,0,200
+1697731896755,567,set-search-name,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,0,0,1,8,null,0,0,0
+1697731897167,156,set-search-name,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,0,0,1,8,null,0,0,0
+1697731897323,47,capture-search-metrics,200,OK,Thread Group 1 -  rare-exact 1-1,text,true,,6696,759,1,8,https://localhost:8089/servicesNS/admin/search/search/jobs/export,39,0,0
+1697731897323,74,capture-search-metrics,200,OK,Thread Group 2 - rare-wildcard 2-1,text,true,,7002,762,1,7,https://localhost:8089/servicesNS/admin/search/search/jobs/export,52,0,0
+1697731896290,2994,sparse-indexed,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,235396,489,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,2974,0,200
+1697731899283,8,set-search-name,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,0,0,1,6,null,0,0,0
+1697731899291,117,capture-search-metrics,200,OK,Thread Group 9- sparse-indexed 8-1,text,true,,7939,763,1,6,https://localhost:8089/servicesNS/admin/search/search/jobs/export,106,0,0
+1697731896290,6254,tstats1,200,OK,Thread Group 3- tstats1 3-1,text,true,,20934,636,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,6240,0,200
+1697731902544,8,set-search-name,200,OK,Thread Group 3- tstats1 3-1,text,true,,0,0,1,5,null,0,0,0
+1697731896290,6310,tstats2,200,OK,Thread Group 4- tstats2 4-1,text,true,,21216,636,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,6295,0,200
+1697731902601,7,set-search-name,200,OK,Thread Group 4- tstats2 4-1,text,true,,0,0,1,5,null,0,0,0
+1697731902552,118,capture-search-metrics,200,OK,Thread Group 3- tstats1 3-1,text,true,,7528,756,1,5,https://localhost:8089/servicesNS/admin/search/search/jobs/export,107,0,0
+1697731902608,120,capture-search-metrics,200,OK,Thread Group 4- tstats2 4-1,text,true,,7516,756,1,4,https://localhost:8089/servicesNS/admin/search/search/jobs/export,108,0,0
+1697731896290,16348,sparse-raw,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,1597907,473,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,16208,0,200
+1697731912638,8,set-search-name,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,0,0,1,3,null,0,0,0
+1697731912646,114,capture-search-metrics,200,OK,Thread Group 8- sparse-raw 7-1,text,true,,7984,759,1,3,https://localhost:8089/servicesNS/admin/search/search/jobs/export,103,0,0
+1697731896290,41924,dense-indexed,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,16616167,463,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,40652,0,200
+1697731938214,7,set-search-name,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,0,0,1,2,null,0,0,0
+1697731938221,114,capture-search-metrics,200,OK,Thread Group 7- dense-indexed 6-1,text,true,,8211,762,1,2,https://localhost:8089/servicesNS/admin/search/search/jobs/export,103,0,0
+1697731896290,86765,dense-raw,200,OK,Thread Group 6- dense-raw 5-1,text,true,,16578347,485,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,85511,0,200
+1697731983056,7,set-search-name,200,OK,Thread Group 6- dense-raw 5-1,text,true,,0,0,1,1,null,0,0,0
+1697731983063,122,capture-search-metrics,200,OK,Thread Group 6- dense-raw 5-1,text,true,,8527,758,1,1,https://localhost:8089/servicesNS/admin/search/search/jobs/export,110,0,9
